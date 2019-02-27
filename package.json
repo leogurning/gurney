@@ -1,0 +1,36 @@
+{
+  "name": "gurney",
+  "version": "1.0.0",
+  "description": "gurning money",
+  "main": "server01.js",
+  "scripts": {
+    "start": "node server01.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "*",
+    "body-parser": "*",
+    "cloudinary": "^1.13.2",
+    "express": "*",
+    "express-fileupload": "^1.1.1-alpha.1",
+    "jsonwebtoken": "*",
+    "morgan": "*",
+    "mysql": "*",
+    "nodemailer": "^5.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leogurning/gurney.git"
+  },
+  "author": "leonard gurning",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leogurning/gurney/issues"
+  },
+  "homepage": "https://github.com/leogurning/gurney#readme",
+  "devDependencies": {
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
+  }
+}
