@@ -45,9 +45,9 @@ apiRoutes.get('/msconfigbygroup/:id', msconfig.listactiveconfigbygroupRouterHand
 apiRoutes.get('/msconfigactivecountries', msconfig.listactivecountriesRouterHandler); // API get msconfig details of the msconfigid
 apiRoutes.get('/msconfigvalue/:id', msconfig.getmsconfigvalueRouterHandler); // API returns msconfig value of the msconfig code
 
-apiRoutes.post('/listactiveprovince/:id', location.listactiveprovince); // API to retrieve province master data aggregate record based on province name and status
-apiRoutes.post('/listactivecity/:id', location.listactivecity); // API to retrieve city master data aggregate record based on city name and status
-apiRoutes.post('/listactivedistrict/:id', location.listactivedistrict); // API to retrieve list district master data record based on district name and status
+apiRoutes.post('/listactiveprovince/:id', location.listactiveprovinceRoutingHandler); // API to retrieve province master data aggregate record based on province name and status
+apiRoutes.post('/listactivecity/:id', location.listactivecityRoutingHandler); // API to retrieve city master data aggregate record based on city name and status
+apiRoutes.post('/listactivedistrict/:id', location.listactivedistrictRoutingHandler); // API to retrieve list district master data record based on district name and status
 apiRoutes.post('/sendemailverification/:id', emailnotif.sendemailverificationRouterHandler);
 apiRoutes.get('/rcvemailverification', user.emverificationRouterHandler);
 apiRoutes.post('/sendresetpwd', emailnotif.sendemailresetpasswordRouterHandler);
@@ -82,26 +82,26 @@ apiRoutes.post('/delusercontactno/:id', user.deleteusercontactnoRouterHandler); 
 apiRoutes.get('/usercontactno/:id', user.getusercontactnoRouterHandler); // API to retrieve user contact no record based on user contact no id
 apiRoutes.post('/listaggusercontactno/:id', user.listaggusercontactnoRouterHandler); // API to retrieve list user address record
 
-apiRoutes.post('/province/:id', location.addprovince); // API to add province master data record
-apiRoutes.put('/province/:id', location.updateprovince); // API to update province master data record
-apiRoutes.delete('/province/:id', location.deleteprovince); // API to delete province master data record
-apiRoutes.get('/province/:id', location.getprovince); // API to retrieve province master data record based on province id
-apiRoutes.post('/listaggprovince/:id', location.listaggprovince); // API to retrieve province master data aggregate record based on province name and status
-apiRoutes.get('/getaggprovince/:id', location.getaggprovince); // API to retrieve province master data aggregate record based on provinceid
+apiRoutes.post('/province/:id', location.addprovinceRoutingHandler); // API to add province master data record
+apiRoutes.put('/province/:id', location.updateprovinceRoutingHandler); // API to update province master data record
+apiRoutes.delete('/province/:id', location.deleteprovinceRoutingHandler); // API to delete province master data record
+apiRoutes.get('/province/:id', location.getprovinceRoutingHandler); // API to retrieve province master data record based on province id
+apiRoutes.post('/listaggprovince/:id', location.listaggprovinceRoutingHandler); // API to retrieve province master data aggregate record based on province name and status
+apiRoutes.get('/getaggprovince/:id', location.getaggprovinceRoutingHandler); // API to retrieve province master data aggregate record based on provinceid
 
-apiRoutes.post('/city/:id', location.addcity); // API to add city master data record
-apiRoutes.put('/city/:id', location.updatecity); // API to update city master data record
-apiRoutes.delete('/city/:id', location.deletecity); // API to delete city master data record based on city id
-apiRoutes.get('/city/:id', location.getcity); // API to retrieve city master data record based on city id
-apiRoutes.post('/listaggcity/:id', location.listaggcity); // API to retrieve city master data aggregate record based on city name and status
-apiRoutes.get('/getaggcity/:id', location.getaggcity); // API to retrieve city master data aggregate record based on cityid
+apiRoutes.post('/city/:id', location.addcityRoutingHandler); // API to add city master data record
+apiRoutes.put('/city/:id', location.updatecityRoutingHandler); // API to update city master data record
+apiRoutes.delete('/city/:id', location.deletecityRoutingHandler); // API to delete city master data record based on city id
+apiRoutes.get('/city/:id', location.getcityRoutingHandler); // API to retrieve city master data record based on city id
+apiRoutes.post('/listaggcity/:id', location.listaggcityRoutingHandler); // API to retrieve city master data aggregate record based on city name and status
+apiRoutes.get('/getaggcity/:id', location.getaggcityRoutingHandler); // API to retrieve city master data aggregate record based on cityid
 
-apiRoutes.post('/district/:id', location.adddistrict); // API to add district master data record
-apiRoutes.put('/district/:id', location.updatedistrict); // API to update district master data record
-apiRoutes.delete('/district/:id', location.deletedistrict); // API to delete district master data record based on district id
-apiRoutes.get('/district/:id', location.getdistrict); // API to retrieve district master data record based on district id
-apiRoutes.post('/listaggdistrict/:id', location.listaggdistrict); // API to retrieve district master data aggregate record based on district name and status
-apiRoutes.get('/getaggdistrict/:id', location.getaggdistrict); // API to retrieve district master data record based on district id
+apiRoutes.post('/district/:id', location.adddistrictRoutingHandler); // API to add district master data record
+apiRoutes.put('/district/:id', location.updatedistrictRoutingHandler); // API to update district master data record
+apiRoutes.delete('/district/:id', location.deletedistrictRoutingHandler); // API to delete district master data record based on district id
+apiRoutes.get('/district/:id', location.getdistrictRoutingHandler); // API to retrieve district master data record based on district id
+apiRoutes.post('/listaggdistrict/:id', location.listaggdistrictRoutingHandler); // API to retrieve district master data aggregate record based on district name and status
+apiRoutes.get('/getaggdistrict/:id', location.getaggdistrictRoutingHandler); // API to retrieve district master data record based on district id
 
 apiRoutes.post('/inputfileupload', filetransfer.inputfileuploadapi); // API to upload input file
 apiRoutes.post('/inputfiledelete', filetransfer.inputfiledeleteapi); // API to delete input file
